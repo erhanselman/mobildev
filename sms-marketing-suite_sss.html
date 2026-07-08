@@ -9,6 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
         /* ===== TOP BAR STYLES ===== */
         .topbar-wrap {
             background: #FF7236;
@@ -4054,9 +4060,11 @@
         </ul>
     </nav>
 
-    <main>
-        <iframe src="https://docs.mobildev.com/sss" style="width:100%; height:100vh; border:none;"></iframe>
-    </main>
+    <div style="width:100%; height:calc(100vh - 154px);">
+        <iframe src="http://docs.mobildev.com/akademi360?embed=sms-marketing-suite"
+            style="width:100%; height:100%; border:none; display:block;">
+        </iframe>
+    </div>
 
     <script>
         function mdnavToggle(id) {
