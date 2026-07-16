@@ -9,6 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
         /* ===== TOP BAR STYLES ===== */
         .topbar-wrap {
             background: #FF7236;
@@ -1940,12 +1946,15 @@
 
         .top-menu {
 
-            background: #11b36d;
+            /* top menü renk erhan */
+            background: #5419df;
             height: 42px;
 
             display: flex;
             justify-content: center;
             align-items: center;
+
+            font-family: "Plus Jakarta Sans", sans-serif;
 
         }
 
@@ -1973,9 +1982,7 @@
 
             color: #fff;
             text-decoration: none;
-            font-size: 17px;
-
-            font-family: "Plus Jakarta Sans", sans-serif;
+            font-size: 16px;
 
             transition: .25s;
 
@@ -2025,7 +2032,8 @@
 
             background: #f5f5f5;
 
-            color: #11b36d;
+            /* dropdown renk erhan */
+            color: #5419df;
 
         }
 
@@ -2050,7 +2058,7 @@
         </div>
     </div>
 
-    <!-- ===== NAVIGATION ===== -->
+    <!-- ===== NAVIGATION erhan ===== -->
     <div id="mdnav-root" data-lang="tr">
         <header class="mdnav-site">
             <div class="wrap navrow">
@@ -2126,14 +2134,39 @@
                                                         <div class="subview active" data-dept-view="sales">
                                                             <div class="inline-feat-list"
                                                                 style="grid-template-columns:repeat(2,1fr);">
-                                                                <a class="inline-feat"
+                                                                <a class="inline-feat" data-new="+docs"
                                                                     href="/sms-marketing-suite.html"><span class="t">SMS
                                                                         Marketing Suite <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
                                                                             <path d="M5 12h14M13 6l6 6-6 6" />
                                                                         </svg></span>
-                                                                    <p>Dönüşümü yüksek kampanyalar</p>
+                                                                    <p>SMS
+                                                                        Marketing Suite</p>
+                                                                </a>
+                                                                <a class="inline-feat" href="edvantage.html"
+                                                                    data-new="+docs"><span class="t">Edvantage<svg
+                                                                            viewBox="0 0 24 24" stroke="currentColor"
+                                                                            fill="none" stroke-width="2">
+                                                                            <path d="M5 12h14M13 6l6 6-6 6" />
+                                                                        </svg></span>
+                                                                    <p>Edvantage</p>
+                                                                </a>
+                                                                <a class="inline-feat" data-new="+docs"
+                                                                    href="wentro.html"><span class="t">Wentro<svg
+                                                                            viewBox="0 0 24 24" stroke="currentColor"
+                                                                            fill="none" stroke-width="2">
+                                                                            <path d="M5 12h14M13 6l6 6-6 6" />
+                                                                        </svg></span>
+                                                                    <p>Wentro</p>
+                                                                </a>
+                                                                <a class="inline-feat" data-new="+docs"
+                                                                    href="access.html"><span class="t">Access <svg
+                                                                            viewBox="0 0 24 24" stroke="currentColor"
+                                                                            fill="none" stroke-width="2">
+                                                                            <path d="M5 12h14M13 6l6 6-6 6" />
+                                                                        </svg></span>
+                                                                    <p>Acsess</p>
                                                                 </a>
                                                                 <a class="inline-feat" href="#ivt/"><span class="t">İVT
                                                                         (Consentration) <svg viewBox="0 0 24 24"
@@ -2174,40 +2207,17 @@
                                                                         </svg></span>
                                                                     <p>Kısa kişiselleştirilmiş link</p>
                                                                 </a>
-                                                                <a class="inline-feat" data-new="Mobildev İştiraki"
-                                                                    data-new-wide href="#robosme-crm-to-win/"><span
-                                                                        class="t">Robosme CRM to Win <svg
-                                                                            viewBox="0 0 24 24" stroke="currentColor"
-                                                                            fill="none" stroke-width="2">
-                                                                            <path d="M5 12h14M13 6l6 6-6 6" />
-                                                                        </svg></span>
-                                                                    <p>Satış fırsatı yönetimi</p>
-                                                                </a>
-                                                                <a class="inline-feat" data-new="Yeni"
-                                                                    href="#loyalist/"><span class="t">Loyalist Loyalty
-                                                                        Platform <svg viewBox="0 0 24 24"
+                                                                <a class="inline-feat" data-new-wide
+                                                                    href="#robosme-crm-to-win/"><span class="t">Robosme
+                                                                        CRM to Win <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
                                                                             <path d="M5 12h14M13 6l6 6-6 6" />
                                                                         </svg></span>
-                                                                    <p>Sadakat ve ödül programları</p>
+                                                                    <p>Satış fırsatı yönetimi</p>
                                                                 </a>
-                                                                <a class="inline-feat" data-new="Yeni"
-                                                                    href="#onayid/"><span class="t">OnayID <svg
-                                                                            viewBox="0 0 24 24" stroke="currentColor"
-                                                                            fill="none" stroke-width="2">
-                                                                            <path d="M5 12h14M13 6l6 6-6 6" />
-                                                                        </svg></span>
-                                                                    <p>Müşteri kimlik & passkey kayıt servisi</p>
-                                                                </a>
-                                                                <a class="inline-feat" data-new="Yeni"
-                                                                    href="#onaypass/"><span class="t">OnayPass <svg
-                                                                            viewBox="0 0 24 24" stroke="currentColor"
-                                                                            fill="none" stroke-width="2">
-                                                                            <path d="M5 12h14M13 6l6 6-6 6" />
-                                                                        </svg></span>
-                                                                    <p>Dinamik QR/Barkod doğrulama servisi</p>
-                                                                </a>
+
+
                                                             </div>
                                                         </div>
                                                         <div class="subview" data-dept-view="marketing">
@@ -2765,7 +2775,7 @@
                                             <h4>Hangi çözüm size uygun, birlikte bulalım.</h4>
                                             <p>15 dakikalık bir görüşmede ihtiyacınıza özel ürün eşleştirmesi yapalım.
                                             </p>
-                                            <a href="/genel-basvuru" class="btn btn-coral btn-sm"
+                                            <a href="#genel-basvuru" class="btn btn-coral btn-sm"
                                                 style="margin-top:auto;">Demo Talep Edin</a>
                                         </div>
                                     </div>
@@ -2816,6 +2826,12 @@
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span><span class="d">Ürün dokümantasyonu ve
                                                     rehberler</span></a>
+                                            <!-- bilgi bankası erhan -->
+                                            <a class="mega-link" href="bilgi-bankasi.html"><span class="t">Bilgi Bankası
+                                                    <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
+                                                        <path d="M5 12h14M13 6l6 6-6 6" />
+                                                    </svg></span><span class="d">Bilgi Bankası</span></a>
                                         </div>
                                         <div class="mega-col">
                                             <h5><span class="icwrap"><svg viewBox="0 0 24 24" fill="none"
@@ -3728,7 +3744,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="/genel-basvuru" class="btn btn-ghost btn-sm">Demo Talep Edin</a>
+                    <a href="#genel-basvuru" class="btn btn-ghost btn-sm">Demo Talep Edin</a>
                     <div class="navitem" data-id="steps">
                         <button class="navbtn mdnav-uc-btn" onclick="mdnavToggle('steps')"
                             aria-label="Yapım aşamasındaki bölümler" title="Yapım Aşamasında">
@@ -4018,34 +4034,21 @@
     <nav class="top-menu">
         <ul class="menu">
 
-            <li><a href="#">SMS Marketing Suite</a></li>
+            <!-- sub menü erhan -->
 
-            <li class="dropdown">
-                <a href="#">Özellikler ▾</a>
-                <div class="dropdown-menu">
-                    <a href="#">Toplu Mesaj</a>
-                    <a href="#">Gönderimler</a>
-                    <a href="#">Hazır Şablonlar</a>
-                    <a href="#">Raporlar</a>
-                </div>
+            <li><a href="wentro.html">Wentro</a></li>
+
+
+            <li>
+                <a href="#">Özellikler</a>
             </li>
 
-            <li class="dropdown">
-                <a href="#">Servisler ▾</a>
-                <div class="dropdown-menu">
-                    <a href="#">API</a>
-                    <a href="#">SMS Gateway</a>
-                    <a href="#">OTP</a>
-                </div>
+            <li>
+                <a href="#">Servisler</a>
             </li>
 
-            <li class="dropdown">
-                <a href="#">Entegrasyonlar ▾</a>
-                <div class="dropdown-menu">
-                    <a href="#">CRM</a>
-                    <a href="#">E-Ticaret</a>
-                    <a href="#">ERP</a>
-                </div>
+            <li>
+                <a href="#">Entegrasyonlar</a>
             </li>
 
             <li class="dropdown">
@@ -4055,9 +4058,10 @@
 
                     <a href="#">Mevzuatlar</a>
                     <a href="#">Blog</a>
-                    <a href="#">Destek</a>
+                    <!--  docs li erhan -->
+                    <a href="wentro_destek.html"><strong>Destek</strong></a>
                     <a href="#">SSS</a>
-                    <a href="#"><strong>SMS Akademi</strong></a>
+                    <a href="#">SMS Akademi</a>
                     <a href="#">Başarı Hikayeleri</a>
 
                 </div>
@@ -4069,9 +4073,12 @@
         </ul>
     </nav>
 
-    <main style="max-width:1320px; margin:80px auto; padding:0 32px; font-family:'Plus Jakarta Sans',sans-serif;">
-        <img src="sms.png" style="width:100%; height:auto;">
-    </main>
+    <!--  iframe erhan -->
+    <div style="width:100%; height:calc(100vh - 154px);">
+        <iframe src="http://localhost:3000/wentro?embed=true&color=5419df;"
+            style="width:100%; height:100%; border:none; display:block;">
+        </iframe>
+    </div>
 
     <script>
         function mdnavToggle(id) {

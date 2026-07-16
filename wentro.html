@@ -1943,6 +1943,104 @@
                 transform: none !important;
             }
         }
+
+        .top-menu {
+            /* top menü renk erhan */
+            background: #5419df;
+            height: 42px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: "Plus Jakarta Sans", sans-serif;
+
+        }
+
+        .menu {
+
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            display: flex;
+            gap: 12px;
+
+        }
+
+        .menu>li {
+
+            position: relative;
+
+        }
+
+        .menu>li>a {
+
+            display: block;
+            padding: 11px 18px;
+
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+
+            transition: .25s;
+
+        }
+
+        .menu>li>a:hover {
+
+            background: rgba(255, 255, 255, .15);
+
+        }
+
+        .dropdown-menu {
+
+            position: absolute;
+            top: 100%;
+            left: 0;
+
+            min-width: 220px;
+
+            background: #fff;
+
+            border-radius: 3px;
+
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .18);
+
+            display: none;
+
+            z-index: 100;
+
+        }
+
+        .dropdown-menu a {
+
+            display: block;
+
+            color: #333;
+
+            padding: 10px 18px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+        }
+
+        .dropdown-menu a:hover {
+
+            background: #f5f5f5;
+
+            /* dropdown renk erhan */
+            color: #5419df;
+
+        }
+
+        .dropdown:hover .dropdown-menu {
+
+            display: block;
+
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -3932,9 +4030,51 @@
         </header>
     </div>
 
+    <nav class="top-menu">
+        <ul class="menu">
+
+            <!-- sub menü erhan -->
+
+            <li><a href="wentro.html">Wentro</a></li>
+
+
+            <li>
+                <a href="#">Özellikler</a>
+            </li>
+
+            <li>
+                <a href="#">Servisler</a>
+            </li>
+
+            <li>
+                <a href="#">Entegrasyonlar</a>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Kaynaklar ▾</a>
+
+                <div class="dropdown-menu">
+
+                    <a href="#">Mevzuatlar</a>
+                    <a href="#">Blog</a>
+                    <!--  docs li erhan -->
+                    <a href="wentro_destek.html"><strong>Destek</strong></a>
+                    <a href="#">SSS</a>
+                    <a href="#">SMS Akademi</a>
+                    <a href="#">Başarı Hikayeleri</a>
+
+                </div>
+
+            </li>
+
+            <li><a href="#">Fiyatlandırma</a></li>
+
+        </ul>
+    </nav>
+
     <main>
         <!--   main png erhan -->
-        <img src="index.png" style="width:100%; height:auto;">
+        <img src="wentro.png" style="width:100%; height:auto;">
     </main>
 
     <script>

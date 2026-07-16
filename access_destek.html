@@ -4,11 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMS Marketing Suite - Mobildev</title>
+    <title>Mobildev - Navigasyon</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
         /* ===== TOP BAR STYLES ===== */
         .topbar-wrap {
             background: #FF7236;
@@ -1937,6 +1943,105 @@
                 transform: none !important;
             }
         }
+
+        .top-menu {
+
+            /* top menü renk erhan */
+            background: #e60b83;
+            height: 42px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: "Plus Jakarta Sans", sans-serif;
+
+        }
+
+        .menu {
+
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            display: flex;
+            gap: 12px;
+
+        }
+
+        .menu>li {
+
+            position: relative;
+
+        }
+
+        .menu>li>a {
+
+            display: block;
+            padding: 11px 18px;
+
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+
+            transition: .25s;
+
+        }
+
+        .menu>li>a:hover {
+
+            background: rgba(255, 255, 255, .15);
+
+        }
+
+        .dropdown-menu {
+
+            position: absolute;
+            top: 100%;
+            left: 0;
+
+            min-width: 220px;
+
+            background: #fff;
+
+            border-radius: 3px;
+
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .18);
+
+            display: none;
+
+            z-index: 100;
+
+        }
+
+        .dropdown-menu a {
+
+            display: block;
+
+            color: #333;
+
+            padding: 10px 18px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+        }
+
+        .dropdown-menu a:hover {
+
+            background: #f5f5f5;
+
+            /* dropdown renk erhan */
+            color: #e60b83;
+
+        }
+
+        .dropdown:hover .dropdown-menu {
+
+            display: block;
+
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -1953,7 +2058,7 @@
         </div>
     </div>
 
-    <!-- ===== NAVIGATION ===== -->
+    <!-- ===== NAVIGATION erhan ===== -->
     <div id="mdnav-root" data-lang="tr">
         <header class="mdnav-site">
             <div class="wrap navrow">
@@ -2029,26 +2134,49 @@
                                                         <div class="subview active" data-dept-view="sales">
                                                             <div class="inline-feat-list"
                                                                 style="grid-template-columns:repeat(2,1fr);">
-                                                                <a class="inline-feat"
-                                                                    href="sms-marketing-suite.html"><span class="t">SMS
+                                                                <a class="inline-feat" data-new="+docs"
+                                                                    href="/sms-marketing-suite.html"><span class="t">SMS
                                                                         Marketing Suite <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
                                                                             <path d="M5 12h14M13 6l6 6-6 6" />
                                                                         </svg></span>
-                                                                    <p>Dönüşümü yüksek kampanyalar</p>
+                                                                    <p>SMS
+                                                                        Marketing Suite</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/ivt/"><span
-                                                                        class="t">İVT (Consentration) <svg
+                                                                <a class="inline-feat" href="edvantage.html"
+                                                                    data-new="+docs"><span class="t">Edvantage<svg
                                                                             viewBox="0 0 24 24" stroke="currentColor"
                                                                             fill="none" stroke-width="2">
                                                                             <path d="M5 12h14M13 6l6 6-6 6" />
                                                                         </svg></span>
+                                                                    <p>Edvantage</p>
+                                                                </a>
+                                                                <a class="inline-feat" data-new="+docs"
+                                                                    href="wentro.html"><span class="t">Wentro<svg
+                                                                            viewBox="0 0 24 24" stroke="currentColor"
+                                                                            fill="none" stroke-width="2">
+                                                                            <path d="M5 12h14M13 6l6 6-6 6" />
+                                                                        </svg></span>
+                                                                    <p>Wentro</p>
+                                                                </a>
+                                                                <a class="inline-feat" data-new="+docs"
+                                                                    href="access.html"><span class="t">Access <svg
+                                                                            viewBox="0 0 24 24" stroke="currentColor"
+                                                                            fill="none" stroke-width="2">
+                                                                            <path d="M5 12h14M13 6l6 6-6 6" />
+                                                                        </svg></span>
+                                                                    <p>Acsess</p>
+                                                                </a>
+                                                                <a class="inline-feat" href="#ivt/"><span class="t">İVT
+                                                                        (Consentration) <svg viewBox="0 0 24 24"
+                                                                            stroke="currentColor" fill="none"
+                                                                            stroke-width="2">
+                                                                            <path d="M5 12h14M13 6l6 6-6 6" />
+                                                                        </svg></span>
                                                                     <p>İzinli veri tabanı yönetimi</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/ivt-lite/"><span
+                                                                <a class="inline-feat" href="#ivt-lite/"><span
                                                                         class="t">İVT Lite <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2056,8 +2184,7 @@
                                                                         </svg></span>
                                                                     <p>Ticari iletişim izni yönetimi</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/form/"><span
+                                                                <a class="inline-feat" href="#form/"><span
                                                                         class="t">Forms <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2065,8 +2192,7 @@
                                                                         </svg></span>
                                                                     <p>Lead toplama formları</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/landing-page/"><span
+                                                                <a class="inline-feat" href="#landing-page/"><span
                                                                         class="t">Landing Page <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2074,59 +2200,31 @@
                                                                         </svg></span>
                                                                     <p>Satış odaklı açılış sayfaları</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/sml/"><span
-                                                                        class="t">SML <svg viewBox="0 0 24 24"
-                                                                            stroke="currentColor" fill="none"
-                                                                            stroke-width="2">
+                                                                <a class="inline-feat" href="#sml/"><span class="t">SML
+                                                                        <svg viewBox="0 0 24 24" stroke="currentColor"
+                                                                            fill="none" stroke-width="2">
                                                                             <path d="M5 12h14M13 6l6 6-6 6" />
                                                                         </svg></span>
                                                                     <p>Kısa kişiselleştirilmiş link</p>
                                                                 </a>
-                                                                <a class="inline-feat" data-new="Mobildev İştiraki"
-                                                                    data-new-wide
-                                                                    href="https://new.mobildev.com/robosme-crm-to-win/"><span
-                                                                        class="t">Robosme CRM to Win <svg
-                                                                            viewBox="0 0 24 24" stroke="currentColor"
-                                                                            fill="none" stroke-width="2">
+                                                                <a class="inline-feat" data-new-wide
+                                                                    href="#robosme-crm-to-win/"><span class="t">Robosme
+                                                                        CRM to Win <svg viewBox="0 0 24 24"
+                                                                            stroke="currentColor" fill="none"
+                                                                            stroke-width="2">
                                                                             <path d="M5 12h14M13 6l6 6-6 6" />
                                                                         </svg></span>
                                                                     <p>Satış fırsatı yönetimi</p>
                                                                 </a>
-                                                                <a class="inline-feat" data-new="Yeni"
-                                                                    href="https://new.mobildev.com/loyalist/"><span
-                                                                        class="t">Loyalist Loyalty Platform <svg
-                                                                            viewBox="0 0 24 24" stroke="currentColor"
-                                                                            fill="none" stroke-width="2">
-                                                                            <path d="M5 12h14M13 6l6 6-6 6" />
-                                                                        </svg></span>
-                                                                    <p>Sadakat ve ödül programları</p>
-                                                                </a>
-                                                                <a class="inline-feat" data-new="Yeni"
-                                                                    href="https://new.mobildev.com/onayid/"><span
-                                                                        class="t">OnayID <svg viewBox="0 0 24 24"
-                                                                            stroke="currentColor" fill="none"
-                                                                            stroke-width="2">
-                                                                            <path d="M5 12h14M13 6l6 6-6 6" />
-                                                                        </svg></span>
-                                                                    <p>Müşteri kimlik & passkey kayıt servisi</p>
-                                                                </a>
-                                                                <a class="inline-feat" data-new="Yeni"
-                                                                    href="https://new.mobildev.com/onaypass/"><span
-                                                                        class="t">OnayPass <svg viewBox="0 0 24 24"
-                                                                            stroke="currentColor" fill="none"
-                                                                            stroke-width="2">
-                                                                            <path d="M5 12h14M13 6l6 6-6 6" />
-                                                                        </svg></span>
-                                                                    <p>Dinamik QR/Barkod doğrulama servisi</p>
-                                                                </a>
+
+
                                                             </div>
                                                         </div>
                                                         <div class="subview" data-dept-view="marketing">
                                                             <div class="inline-feat-list"
                                                                 style="grid-template-columns:repeat(2,1fr);">
                                                                 <a class="inline-feat"
-                                                                    href="sms-marketing-suite.html"><span class="t">SMS
+                                                                    href="#sms-marketing-suite/"><span class="t">SMS
                                                                         Marketing Suite <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2134,8 +2232,7 @@
                                                                         </svg></span>
                                                                     <p>Dönüşümü yüksek kampanyalar</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/anket/"><span
+                                                                <a class="inline-feat" href="#anket/"><span
                                                                         class="t">Insightive <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2144,25 +2241,22 @@
                                                                     <p>Anket, NPS, geri bildirim platformu</p>
                                                                 </a>
                                                                 <a class="inline-feat" data-new="Yeni"
-                                                                    href="https://new.mobildev.com/expulse/"><span
-                                                                        class="t">ExPulse <svg viewBox="0 0 24 24"
-                                                                            stroke="currentColor" fill="none"
-                                                                            stroke-width="2">
-                                                                            <path d="M5 12h14M13 6l6 6-6 6" />
-                                                                        </svg></span>
-                                                                    <p>Anlık kampanya tetikleme motoru</p>
-                                                                </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/ivt/"><span
-                                                                        class="t">İVT (Consentration) <svg
+                                                                    href="#expulse/"><span class="t">ExPulse <svg
                                                                             viewBox="0 0 24 24" stroke="currentColor"
                                                                             fill="none" stroke-width="2">
                                                                             <path d="M5 12h14M13 6l6 6-6 6" />
                                                                         </svg></span>
+                                                                    <p>Anlık kampanya tetikleme motoru</p>
+                                                                </a>
+                                                                <a class="inline-feat" href="#ivt/"><span class="t">İVT
+                                                                        (Consentration) <svg viewBox="0 0 24 24"
+                                                                            stroke="currentColor" fill="none"
+                                                                            stroke-width="2">
+                                                                            <path d="M5 12h14M13 6l6 6-6 6" />
+                                                                        </svg></span>
                                                                     <p>İzinli veri tabanı yönetimi</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/ivt-lite/"><span
+                                                                <a class="inline-feat" href="#ivt-lite/"><span
                                                                         class="t">İVT Lite <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2170,8 +2264,7 @@
                                                                         </svg></span>
                                                                     <p>Ticari iletişim izni yönetimi</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/form/"><span
+                                                                <a class="inline-feat" href="#form/"><span
                                                                         class="t">Forms <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2179,8 +2272,7 @@
                                                                         </svg></span>
                                                                     <p>Lead toplama formları</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/landing-page/"><span
+                                                                <a class="inline-feat" href="#landing-page/"><span
                                                                         class="t">Landing Page <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2188,8 +2280,7 @@
                                                                         </svg></span>
                                                                     <p>Satış odaklı açılış sayfaları</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/qr-kod/"><span
+                                                                <a class="inline-feat" href="#qr-kod/"><span
                                                                         class="t">QR Generator <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2197,9 +2288,8 @@
                                                                         </svg></span>
                                                                     <p>Kişiselleştirilmiş QR kampanyaları</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/sml/"><span
-                                                                        class="t">Tiny URL <svg viewBox="0 0 24 24"
+                                                                <a class="inline-feat" href="#sml/"><span class="t">Tiny
+                                                                        URL <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
                                                                             <path d="M5 12h14M13 6l6 6-6 6" />
@@ -2211,8 +2301,7 @@
                                                         <div class="subview" data-dept-view="mobilpazarlama">
                                                             <div class="inline-feat-list"
                                                                 style="grid-template-columns:repeat(2,1fr);">
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/sms-cekilis/"><span
+                                                                <a class="inline-feat" href="#sms-cekilis/"><span
                                                                         class="t">SMS Çekiliş <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2220,8 +2309,7 @@
                                                                         </svg></span>
                                                                     <p>SMS tabanlı çekiliş kampanyaları</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/mobil-promosyon/"><span
+                                                                <a class="inline-feat" href="#mobil-promosyon/"><span
                                                                         class="t">Mobil Promosyon <svg
                                                                             viewBox="0 0 24 24" stroke="currentColor"
                                                                             fill="none" stroke-width="2">
@@ -2234,17 +2322,14 @@
                                                         <div class="subview" data-dept-view="comms">
                                                             <div class="inline-feat-list"
                                                                 style="grid-template-columns:repeat(2,1fr);">
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/gip/"><span
-                                                                        class="t">GİP <svg viewBox="0 0 24 24"
-                                                                            stroke="currentColor" fill="none"
-                                                                            stroke-width="2">
+                                                                <a class="inline-feat" href="#gip/"><span class="t">GİP
+                                                                        <svg viewBox="0 0 24 24" stroke="currentColor"
+                                                                            fill="none" stroke-width="2">
                                                                             <path d="M5 12h14M13 6l6 6-6 6" />
                                                                         </svg></span>
                                                                     <p>Mobildev SMS Gateway</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/worksy/"><span
+                                                                <a class="inline-feat" href="#worksy/"><span
                                                                         class="t">Worksy <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2253,7 +2338,7 @@
                                                                     <p>360° müşteri + çalışan iletişimi</p>
                                                                 </a>
                                                                 <a class="inline-feat"
-                                                                    href="sms-marketing-suite.html"><span class="t">SMS
+                                                                    href="#sms-marketing-suite/"><span class="t">SMS
                                                                         Marketing Suite <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2261,8 +2346,7 @@
                                                                         </svg></span>
                                                                     <p>Dönüşümü yüksek kampanyalar</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/sms-inbox/"><span
+                                                                <a class="inline-feat" href="#sms-inbox/"><span
                                                                         class="t">SMS Inbox <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2270,8 +2354,7 @@
                                                                         </svg></span>
                                                                     <p>Hızlı, çift yönlü SMS iletişimi</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/mail-to-sms"><span
+                                                                <a class="inline-feat" href="#mail-to-sms"><span
                                                                         class="t">Mail2SMS <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2279,8 +2362,7 @@
                                                                         </svg></span>
                                                                     <p>E-postaları SMS'e dönüştürün</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/acil-care/"><span
+                                                                <a class="inline-feat" href="#acil-care/"><span
                                                                         class="t">Acil•Care <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2289,10 +2371,9 @@
                                                                     <p>Acil bildirim yönetimi</p>
                                                                 </a>
                                                                 <a class="inline-feat" data-new="Yeni"
-                                                                    href="https://new.mobildev.com/maibot/"><span
-                                                                        class="t">MaiBot <svg viewBox="0 0 24 24"
-                                                                            stroke="currentColor" fill="none"
-                                                                            stroke-width="2">
+                                                                    href="#maibot/"><span class="t">MaiBot <svg
+                                                                            viewBox="0 0 24 24" stroke="currentColor"
+                                                                            fill="none" stroke-width="2">
                                                                             <path d="M5 12h14M13 6l6 6-6 6" />
                                                                         </svg></span>
                                                                     <p>Yapay zekâ destekli iletişim asistanı</p>
@@ -2302,8 +2383,7 @@
                                                         <div class="subview" data-dept-view="hr">
                                                             <div class="inline-feat-list"
                                                                 style="grid-template-columns:repeat(2,1fr);">
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/worksy/"><span
+                                                                <a class="inline-feat" href="#worksy/"><span
                                                                         class="t">Worksy <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2311,8 +2391,7 @@
                                                                         </svg></span>
                                                                     <p>360° müşteri + çalışan iletişimi</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/anket/"><span
+                                                                <a class="inline-feat" href="#anket/"><span
                                                                         class="t">Insightive <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2320,8 +2399,7 @@
                                                                         </svg></span>
                                                                     <p>Anket, NPS, geri bildirim platformu</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/acil-care/"><span
+                                                                <a class="inline-feat" href="#acil-care/"><span
                                                                         class="t">Acil•Care <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2334,17 +2412,15 @@
                                                         <div class="subview" data-dept-view="legal">
                                                             <div class="inline-feat-list"
                                                                 style="grid-template-columns:repeat(2,1fr);">
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/ivt/"><span
-                                                                        class="t">İVT (Consentration) <svg
-                                                                            viewBox="0 0 24 24" stroke="currentColor"
-                                                                            fill="none" stroke-width="2">
+                                                                <a class="inline-feat" href="#ivt/"><span class="t">İVT
+                                                                        (Consentration) <svg viewBox="0 0 24 24"
+                                                                            stroke="currentColor" fill="none"
+                                                                            stroke-width="2">
                                                                             <path d="M5 12h14M13 6l6 6-6 6" />
                                                                         </svg></span>
                                                                     <p>İzinli veri tabanı yönetimi</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/ivt-lite/"><span
+                                                                <a class="inline-feat" href="#ivt-lite/"><span
                                                                         class="t">İVT Lite <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2352,8 +2428,7 @@
                                                                         </svg></span>
                                                                     <p>Ticari iletişim izni yönetimi</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/cookie-management/"><span
+                                                                <a class="inline-feat" href="#cookie-management/"><span
                                                                         class="t">Cookie Management <svg
                                                                             viewBox="0 0 24 24" stroke="currentColor"
                                                                             fill="none" stroke-width="2">
@@ -2361,8 +2436,7 @@
                                                                         </svg></span>
                                                                     <p>Çerez yönetim servisi</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/access/"><span
+                                                                <a class="inline-feat" href="#access/"><span
                                                                         class="t">Access <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2370,8 +2444,7 @@
                                                                         </svg></span>
                                                                     <p>Erişilebilirlik platformu (WCAG)</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/ret-bildirimi/"><span
+                                                                <a class="inline-feat" href="#ret-bildirimi/"><span
                                                                         class="t">Ret Bildirimi <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2379,8 +2452,7 @@
                                                                         </svg></span>
                                                                     <p>Ret/iptal taleplerinin yönetimi</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/tckn-sms/"><span
+                                                                <a class="inline-feat" href="#tckn-sms/"><span
                                                                         class="t">TCKN SMS <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2389,7 +2461,7 @@
                                                                     <p>TCKN doğrulamalı SMS gönderimi</p>
                                                                 </a>
                                                                 <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/tckn-msisdn-sorgulama/"><span
+                                                                    href="#tckn-msisdn-sorgulama/"><span
                                                                         class="t">TCKN-MSISDN Sorgulama <svg
                                                                             viewBox="0 0 24 24" stroke="currentColor"
                                                                             fill="none" stroke-width="2">
@@ -2398,25 +2470,22 @@
                                                                     <p>TCKN-telefon numarası eşleştirme</p>
                                                                 </a>
                                                                 <a class="inline-feat" data-new="Yeni"
-                                                                    href="https://new.mobildev.com/onayid/"><span
-                                                                        class="t">OnayID <svg viewBox="0 0 24 24"
-                                                                            stroke="currentColor" fill="none"
-                                                                            stroke-width="2">
+                                                                    href="#onayid/"><span class="t">OnayID <svg
+                                                                            viewBox="0 0 24 24" stroke="currentColor"
+                                                                            fill="none" stroke-width="2">
                                                                             <path d="M5 12h14M13 6l6 6-6 6" />
                                                                         </svg></span>
                                                                     <p>KVKK 2026/266 uyumlu kimlik kaydı</p>
                                                                 </a>
                                                                 <a class="inline-feat" data-new="Yeni"
-                                                                    href="https://new.mobildev.com/onaypass/"><span
-                                                                        class="t">OnayPass <svg viewBox="0 0 24 24"
-                                                                            stroke="currentColor" fill="none"
-                                                                            stroke-width="2">
+                                                                    href="#onaypass/"><span class="t">OnayPass <svg
+                                                                            viewBox="0 0 24 24" stroke="currentColor"
+                                                                            fill="none" stroke-width="2">
                                                                             <path d="M5 12h14M13 6l6 6-6 6" />
                                                                         </svg></span>
                                                                     <p>Sadakat kart işleminde rıza doğrulaması</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/apinomy/"><span
+                                                                <a class="inline-feat" href="#apinomy/"><span
                                                                         class="t">Apinomy <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2429,8 +2498,7 @@
                                                         <div class="subview" data-dept-view="finance">
                                                             <div class="inline-feat-list"
                                                                 style="grid-template-columns:repeat(2,1fr);">
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/transactional-sms/"><span
+                                                                <a class="inline-feat" href="#transactional-sms/"><span
                                                                         class="t">Transactional SMS <svg
                                                                             viewBox="0 0 24 24" stroke="currentColor"
                                                                             fill="none" stroke-width="2">
@@ -2438,8 +2506,7 @@
                                                                         </svg></span>
                                                                     <p>İşlemsel bildirim mesajları</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/otp-sms/"><span
+                                                                <a class="inline-feat" href="#otp-sms/"><span
                                                                         class="t">OTP SMS <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2447,8 +2514,7 @@
                                                                         </svg></span>
                                                                     <p>Tek kullanımlık şifre gönderimi</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/sim-otp/"><span
+                                                                <a class="inline-feat" href="#sim-otp/"><span
                                                                         class="t">Sim OTP <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2456,8 +2522,7 @@
                                                                         </svg></span>
                                                                     <p>SIM tabanlı güvenli OTP</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/mdq-validate/"><span
+                                                                <a class="inline-feat" href="#mdq-validate/"><span
                                                                         class="t">MDQ Validate <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2465,8 +2530,7 @@
                                                                         </svg></span>
                                                                     <p>Numara/e-posta geçerlilik kontrolü</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/mdq-verify/"><span
+                                                                <a class="inline-feat" href="#mdq-verify/"><span
                                                                         class="t">MDQ Verify <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2474,8 +2538,7 @@
                                                                         </svg></span>
                                                                     <p>Kimlik ve veri doğrulama (KYC)</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/access/"><span
+                                                                <a class="inline-feat" href="#access/"><span
                                                                         class="t">Access <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2483,8 +2546,7 @@
                                                                         </svg></span>
                                                                     <p>Erişilebilirlik platformu (WCAG)</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/cookie-management/"><span
+                                                                <a class="inline-feat" href="#cookie-management/"><span
                                                                         class="t">Cookie Management <svg
                                                                             viewBox="0 0 24 24" stroke="currentColor"
                                                                             fill="none" stroke-width="2">
@@ -2498,16 +2560,14 @@
                                                             <div class="inline-feat-list"
                                                                 style="grid-template-columns:repeat(2,1fr);">
                                                                 <a class="inline-feat" data-new="Yeni"
-                                                                    href="https://new.mobildev.com/edvantage/"><span
-                                                                        class="t">Edvantage <svg viewBox="0 0 24 24"
-                                                                            stroke="currentColor" fill="none"
-                                                                            stroke-width="2">
+                                                                    href="#edvantage/"><span class="t">Edvantage <svg
+                                                                            viewBox="0 0 24 24" stroke="currentColor"
+                                                                            fill="none" stroke-width="2">
                                                                             <path d="M5 12h14M13 6l6 6-6 6" />
                                                                         </svg></span>
                                                                     <p>Kurumsal eğitim ve sertifikasyon</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/anket/"><span
+                                                                <a class="inline-feat" href="#anket/"><span
                                                                         class="t">Insightive <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2515,8 +2575,7 @@
                                                                         </svg></span>
                                                                     <p>Anket, NPS, geri bildirim platformu</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/toplu-sms-1/"><span
+                                                                <a class="inline-feat" href="#toplu-sms-1/"><span
                                                                         class="t">Toplu SMS <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2524,11 +2583,9 @@
                                                                         </svg></span>
                                                                     <p>Yüksek hacimli mesajlaşma</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/sml/"><span
-                                                                        class="t">SML <svg viewBox="0 0 24 24"
-                                                                            stroke="currentColor" fill="none"
-                                                                            stroke-width="2">
+                                                                <a class="inline-feat" href="#sml/"><span class="t">SML
+                                                                        <svg viewBox="0 0 24 24" stroke="currentColor"
+                                                                            fill="none" stroke-width="2">
                                                                             <path d="M5 12h14M13 6l6 6-6 6" />
                                                                         </svg></span>
                                                                     <p>Kısa kişiselleştirilmiş link</p>
@@ -2538,8 +2595,7 @@
                                                         <div class="subview" data-dept-view="developer">
                                                             <div class="inline-feat-list"
                                                                 style="grid-template-columns:repeat(2,1fr);">
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/apinomy/"><span
+                                                                <a class="inline-feat" href="#apinomy/"><span
                                                                         class="t">Apinomy <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2547,8 +2603,7 @@
                                                                         </svg></span>
                                                                     <p>API ekonomisi & marketplace</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/sms-api/"><span
+                                                                <a class="inline-feat" href="#sms-api/"><span
                                                                         class="t">SMS API <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2556,8 +2611,7 @@
                                                                         </svg></span>
                                                                     <p>SOAP / HTTPS gönderim servisi</p>
                                                                 </a>
-                                                                <a class="inline-feat"
-                                                                    href="https://new.mobildev.com/gip-api/"><span
+                                                                <a class="inline-feat" href="#gip-api/"><span
                                                                         class="t">GİP API <svg viewBox="0 0 24 24"
                                                                             stroke="currentColor" fill="none"
                                                                             stroke-width="2">
@@ -2574,55 +2628,51 @@
                                             <div class="tabview" data-tabview="channels">
                                                 <div class="inline-feat-list"
                                                     style="grid-template-columns:repeat(3,1fr);">
-                                                    <a class="inline-feat" href="https://new.mobildev.com/sms/"><span
-                                                            class="t">SMS <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                                fill="none" stroke-width="2">
+                                                    <a class="inline-feat" href="#sms/"><span class="t">SMS <svg
+                                                                viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                                stroke-width="2">
                                                                 <path d="M5 12h14M13 6l6 6-6 6" />
                                                             </svg></span>
                                                         <p>SMS ile pazarlama nedir, neden SMS?</p>
                                                     </a>
-                                                    <a class="inline-feat" href="https://new.mobildev.com/email/"><span
-                                                            class="t">Email <svg viewBox="0 0 24 24"
-                                                                stroke="currentColor" fill="none" stroke-width="2">
+                                                    <a class="inline-feat" href="#email/"><span class="t">Email <svg
+                                                                viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                                stroke-width="2">
                                                                 <path d="M5 12h14M13 6l6 6-6 6" />
                                                             </svg></span>
                                                         <p>E-posta kanalı kullanım alanları</p>
                                                     </a>
-                                                    <a class="inline-feat"
-                                                        href="https://new.mobildev.com/whatsapp/"><span
-                                                            class="t">WhatsApp <svg viewBox="0 0 24 24"
-                                                                stroke="currentColor" fill="none" stroke-width="2">
+                                                    <a class="inline-feat" href="#whatsapp/"><span class="t">WhatsApp
+                                                            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                                stroke-width="2">
                                                                 <path d="M5 12h14M13 6l6 6-6 6" />
                                                             </svg></span>
                                                         <p>İşletme mesajlaşma kanalı</p>
                                                     </a>
-                                                    <a class="inline-feat"
-                                                        href="https://new.mobildev.com/telegram/"><span
-                                                            class="t">Telegram <svg viewBox="0 0 24 24"
-                                                                stroke="currentColor" fill="none" stroke-width="2">
+                                                    <a class="inline-feat" href="#telegram/"><span class="t">Telegram
+                                                            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                                stroke-width="2">
                                                                 <path d="M5 12h14M13 6l6 6-6 6" />
                                                             </svg></span>
                                                         <p>Bot ve kanal mesajlaşması</p>
                                                     </a>
-                                                    <a class="inline-feat" href="https://new.mobildev.com/viber/"><span
-                                                            class="t">Viber <svg viewBox="0 0 24 24"
-                                                                stroke="currentColor" fill="none" stroke-width="2">
+                                                    <a class="inline-feat" href="#viber/"><span class="t">Viber <svg
+                                                                viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                                stroke-width="2">
                                                                 <path d="M5 12h14M13 6l6 6-6 6" />
                                                             </svg></span>
                                                         <p>Zengin medya mesajlaşma</p>
                                                     </a>
-                                                    <a class="inline-feat"
-                                                        href="https://new.mobildev.com/webpush/"><span class="t">WebPush
+                                                    <a class="inline-feat" href="#webpush/"><span class="t">WebPush
                                                             <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
                                                                 stroke-width="2">
                                                                 <path d="M5 12h14M13 6l6 6-6 6" />
                                                             </svg></span>
                                                         <p>Tarayıcı bildirimleri</p>
                                                     </a>
-                                                    <a class="inline-feat"
-                                                        href="https://new.mobildev.com/mobile-push/"><span
-                                                            class="t">Mobile Push <svg viewBox="0 0 24 24"
-                                                                stroke="currentColor" fill="none" stroke-width="2">
+                                                    <a class="inline-feat" href="#mobile-push/"><span class="t">Mobile
+                                                            Push <svg viewBox="0 0 24 24" stroke="currentColor"
+                                                                fill="none" stroke-width="2">
                                                                 <path d="M5 12h14M13 6l6 6-6 6" />
                                                             </svg></span>
                                                         <p>Uygulama içi anlık bildirimler</p>
@@ -2633,45 +2683,42 @@
                                             <div class="tabview" data-tabview="platforms">
                                                 <div class="inline-feat-list"
                                                     style="grid-template-columns:repeat(3,1fr);">
-                                                    <a class="inline-feat" href="https://new.mobildev.com/anket/"><span
-                                                            class="t">Insightive <svg viewBox="0 0 24 24"
-                                                                stroke="currentColor" fill="none" stroke-width="2">
+                                                    <a class="inline-feat" href="#anket/"><span class="t">Insightive
+                                                            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                                stroke-width="2">
                                                                 <path d="M5 12h14M13 6l6 6-6 6" />
                                                             </svg></span>
                                                         <p>Survey, NPS & geri bildirim şemsiyesi</p>
                                                     </a>
-                                                    <a class="inline-feat"
-                                                        href="https://new.mobildev.com/consentration/"><span
+                                                    <a class="inline-feat" href="#consentration/"><span
                                                             class="t">Consentration <svg viewBox="0 0 24 24"
                                                                 stroke="currentColor" fill="none" stroke-width="2">
                                                                 <path d="M5 12h14M13 6l6 6-6 6" />
                                                             </svg></span>
                                                         <p>İzin & Rıza yönetimi şemsiyesi</p>
                                                     </a>
-                                                    <a class="inline-feat" href="https://new.mobildev.com/mdq/"><span
-                                                            class="t">MDQ <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                                fill="none" stroke-width="2">
+                                                    <a class="inline-feat" href="#mdq/"><span class="t">MDQ <svg
+                                                                viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                                stroke-width="2">
                                                                 <path d="M5 12h14M13 6l6 6-6 6" />
                                                             </svg></span>
                                                         <p>Veri kalitesi: Validation + Verify</p>
                                                     </a>
-                                                    <a class="inline-feat" href="https://new.mobildev.com/worksy/"><span
-                                                            class="t">Worksy <svg viewBox="0 0 24 24"
-                                                                stroke="currentColor" fill="none" stroke-width="2">
+                                                    <a class="inline-feat" href="#worksy/"><span class="t">Worksy <svg
+                                                                viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                                stroke-width="2">
                                                                 <path d="M5 12h14M13 6l6 6-6 6" />
                                                             </svg></span>
                                                         <p>360° iletişim ekosistemi</p>
                                                     </a>
-                                                    <a class="inline-feat"
-                                                        href="https://new.mobildev.com/infomize/"><span
-                                                            class="t">Infomize <svg viewBox="0 0 24 24"
-                                                                stroke="currentColor" fill="none" stroke-width="2">
+                                                    <a class="inline-feat" href="#infomize/"><span class="t">Infomize
+                                                            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                                stroke-width="2">
                                                                 <path d="M5 12h14M13 6l6 6-6 6" />
                                                             </svg></span>
                                                         <p>Veri zenginleştirme platformu</p>
                                                     </a>
-                                                    <a class="inline-feat"
-                                                        href="https://new.mobildev.com/datamin/"><span class="t">Datamin
+                                                    <a class="inline-feat" href="#datamin/"><span class="t">Datamin
                                                             <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
                                                                 stroke-width="2">
                                                                 <path d="M5 12h14M13 6l6 6-6 6" />
@@ -2684,16 +2731,14 @@
                                             <div class="tabview" data-tabview="services">
                                                 <div class="inline-feat-list"
                                                     style="grid-template-columns:repeat(2,1fr);">
-                                                    <a class="inline-feat"
-                                                        href="https://new.mobildev.com/managed-services/"><span
+                                                    <a class="inline-feat" href="#managed-services/"><span
                                                             class="t">Managed Services <svg viewBox="0 0 24 24"
                                                                 stroke="currentColor" fill="none" stroke-width="2">
                                                                 <path d="M5 12h14M13 6l6 6-6 6" />
                                                             </svg></span>
                                                         <p>Operasyonu Mobildev ekibine bırakın</p>
                                                     </a>
-                                                    <a class="inline-feat"
-                                                        href="https://new.mobildev.com/integration-services/"><span
+                                                    <a class="inline-feat" href="#integration-services/"><span
                                                             class="t">Integration Services <svg viewBox="0 0 24 24"
                                                                 stroke="currentColor" fill="none" stroke-width="2">
                                                                 <path d="M5 12h14M13 6l6 6-6 6" />
@@ -2706,16 +2751,14 @@
                                             <div class="tabview" data-tabview="marketplace">
                                                 <div class="inline-feat-list"
                                                     style="grid-template-columns:repeat(2,1fr);">
-                                                    <a class="inline-feat"
-                                                        href="https://new.mobildev.com/cozum-ortaklarini-kesfet/"><span
+                                                    <a class="inline-feat" href="#cozum-ortaklarini-kesfet/"><span
                                                             class="t">Çözüm Ortaklarını Keşfet <svg viewBox="0 0 24 24"
                                                                 stroke="currentColor" fill="none" stroke-width="2">
                                                                 <path d="M5 12h14M13 6l6 6-6 6" />
                                                             </svg></span>
                                                         <p>ERP, CRM, E-Ticaret ve daha fazlası</p>
                                                     </a>
-                                                    <a class="inline-feat"
-                                                        href="https://new.mobildev.com/entegrasyona-gore-bul/"><span
+                                                    <a class="inline-feat" href="#entegrasyona-gore-bul/"><span
                                                             class="t">Entegrasyona Göre Bul <svg viewBox="0 0 24 24"
                                                                 stroke="currentColor" fill="none" stroke-width="2">
                                                                 <path d="M5 12h14M13 6l6 6-6 6" />
@@ -2732,7 +2775,7 @@
                                             <h4>Hangi çözüm size uygun, birlikte bulalım.</h4>
                                             <p>15 dakikalık bir görüşmede ihtiyacınıza özel ürün eşleştirmesi yapalım.
                                             </p>
-                                            <a href="/genel-basvuru" class="btn btn-coral btn-sm"
+                                            <a href="#genel-basvuru" class="btn btn-coral btn-sm"
                                                 style="margin-top:auto;">Demo Talep Edin</a>
                                         </div>
                                     </div>
@@ -2783,6 +2826,12 @@
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span><span class="d">Ürün dokümantasyonu ve
                                                     rehberler</span></a>
+                                            <!-- bilgi bankası erhan -->
+                                            <a class="mega-link" href="bilgi-bankasi.html"><span class="t">Bilgi Bankası
+                                                    <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
+                                                        <path d="M5 12h14M13 6l6 6-6 6" />
+                                                    </svg></span><span class="d">Bilgi Bankası</span></a>
                                         </div>
                                         <div class="mega-col">
                                             <h5><span class="icwrap"><svg viewBox="0 0 24 24" fill="none"
@@ -2800,9 +2849,9 @@
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span><span class="d">KVKK · ETK · AI Act · İYS · GDPR + ülke
                                                     karşılaştırması</span></a>
-                                            <a class="mega-link" href="https://new.mobildev.com/terimler-sozlugu/"><span
-                                                    class="t">Terimler Sözlüğü <svg viewBox="0 0 24 24"
-                                                        stroke="currentColor" fill="none" stroke-width="2">
+                                            <a class="mega-link" href="#terimler-sozlugu/"><span class="t">Terimler
+                                                    Sözlüğü <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span><span class="d">17 kategori · MarTech, Telekom, KVKK ve
                                                     daha fazlası</span></a>
@@ -3695,7 +3744,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="/genel-basvuru" class="btn btn-ghost btn-sm">Demo Talep Edin</a>
+                    <a href="#genel-basvuru" class="btn btn-ghost btn-sm">Demo Talep Edin</a>
                     <div class="navitem" data-id="steps">
                         <button class="navbtn mdnav-uc-btn" onclick="mdnavToggle('steps')"
                             aria-label="Yapım aşamasındaki bölümler" title="Yapım Aşamasında">
@@ -3737,73 +3786,72 @@
                                     </div>
                                     <div class="stepview active" data-stepview="s1">
                                         <div class="inline-feat-list" style="grid-template-columns:repeat(5,1fr);">
-                                            <a class="inline-feat" href="sms-marketing-suite.html"><span class="t">SMS
+                                            <a class="inline-feat" href="#sms-marketing-suite/"><span class="t">SMS
                                                     Marketing Suite <svg viewBox="0 0 24 24" stroke="currentColor"
                                                         fill="none" stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Dönüşümü yüksek kampanyalar</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/ivt/"><span
-                                                    class="t">İVT <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                        fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#ivt/"><span class="t">İVT <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>İzinli veri tabanı yönetimi</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/ivt-lite/"><span
-                                                    class="t">İVT Lite <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                        fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#ivt-lite/"><span class="t">İVT Lite <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Hızlı izin toplama</p>
                                             </a>
-                                            <a class="inline-feat"
-                                                href="https://new.mobildev.com/cookie-management/"><span
-                                                    class="t">Cookie M. <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                        fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#cookie-management/"><span class="t">Cookie M.
+                                                    <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Çerez yönetim servisi</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/gip/"><span
-                                                    class="t">GİP <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                        fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#gip/"><span class="t">GİP <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Mobildev SMS Gateway</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/access/"><span
-                                                    class="t">Access <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                        fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#access/"><span class="t">Access <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Erişilebilirlik (WCAG)</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/ret-bildirimi/"><span
-                                                    class="t">Ret <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                        fill="none" stroke-width="2">
-                                                        <path d="M5 12h14M13 6l6 6-ld6 6" />
+                                            <a class="inline-feat" href="#ret-bildirimi/"><span class="t">Ret <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
+                                                        <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Ret bildirimi yönetimi</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/anket/"><span
-                                                    class="t">Anket <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                        fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#anket/"><span class="t">Anket <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Insightive anket platformu</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/sml/"><span
-                                                    class="t">SML <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                        fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#sml/"><span class="t">SML <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Kısa kişiselleştirilmiş link</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/mail-to-sms"><span
-                                                    class="t">Mail2SMS <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                        fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#mail-to-sms"><span class="t">Mail2SMS <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>E-postaları SMS'e dönüştürün</p>
@@ -3812,81 +3860,79 @@
                                     </div>
                                     <div class="stepview" data-stepview="s2">
                                         <div class="inline-feat-list" style="grid-template-columns:repeat(5,1fr);">
-                                            <a class="inline-feat" href="https://new.mobildev.com/sms-inbox/"><span
-                                                    class="t">SMS Inbox <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                        fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#sms-inbox/"><span class="t">SMS Inbox <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Çift yönlü SMS iletişimi</p>
                                             </a>
-                                            <a class="inline-feat"
-                                                href="https://new.mobildev.com/transactional-sms/"><span
+                                            <a class="inline-feat" href="#transactional-sms/"><span
                                                     class="t">Transactional SMS <svg viewBox="0 0 24 24"
                                                         stroke="currentColor" fill="none" stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>İşlemsel bildirim mesajları</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/interaktif-sms/"><span
-                                                    class="t">Interaktif SMS <svg viewBox="0 0 24 24"
-                                                        stroke="currentColor" fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#interaktif-sms/"><span class="t">Interaktif
+                                                    SMS <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Etkileşimli SMS akışları</p>
                                             </a>
-                                            <a class="inline-feat"
-                                                href="https://new.mobildev.com/gsm-verification/"><span class="t">GSM
+                                            <a class="inline-feat" href="#gsm-verification/"><span class="t">GSM
                                                     Verification <svg viewBox="0 0 24 24" stroke="currentColor"
                                                         fill="none" stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>GSM doğrulama (MDQ)</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/landing-page/"><span
-                                                    class="t">Landing Page <svg viewBox="0 0 24 24"
-                                                        stroke="currentColor" fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#landing-page/"><span class="t">Landing Page
+                                                    <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Satış odaklı açılış sayfaları</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/qr-kod/"><span
-                                                    class="t">QR Kod <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                        fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#qr-kod/"><span class="t">QR Kod <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Kişiselleştirilmiş QR kampanyaları</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/sml/"><span
-                                                    class="t">Kısa URL <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                        fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#sml/"><span class="t">Kısa URL <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Kısa kişiselleştirilmiş link (SML)</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/mdq/"><span
-                                                    class="t">E-Mail Verification <svg viewBox="0 0 24 24"
-                                                        stroke="currentColor" fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#mdq/"><span class="t">E-Mail Verification <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>E-posta doğrulama (MDQ)</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/sim-otp/"><span
-                                                    class="t">SIM OTP <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                        fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#sim-otp/"><span class="t">SIM OTP <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Güvenli tek kullanımlık şifre</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/acil-care/"><span
-                                                    class="t">Acil Care <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                        fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#acil-care/"><span class="t">Acil Care <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Acil bildirim yönetimi</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/toplu-sms-1/"><span
-                                                    class="t">MMS <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                        fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#toplu-sms-1/"><span class="t">MMS <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Toplu SMS / MMS gönderimi</p>
@@ -3895,16 +3941,16 @@
                                     </div>
                                     <div class="stepview" data-stepview="s3">
                                         <div class="inline-feat-list" style="grid-template-columns:repeat(5,1fr);">
-                                            <a class="inline-feat" href="https://new.mobildev.com/mdq/"><span
-                                                    class="t">MDQ <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                        fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#mdq/"><span class="t">MDQ <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Veri kalitesi: Validation + Verify</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/infomize/"><span
-                                                    class="t">Infomize <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                        fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#infomize/"><span class="t">Infomize <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Veri zenginleştirme servisi</p>
@@ -3913,52 +3959,51 @@
                                     </div>
                                     <div class="stepview" data-stepview="s4">
                                         <div class="inline-feat-list" style="grid-template-columns:repeat(5,1fr);">
-                                            <a class="inline-feat" href="https://new.mobildev.com/hakkimizda/"><span
-                                                    class="t">Hakkımızda <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                        fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#hakkimizda/"><span class="t">Hakkımızda <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Şirket hakkında bilgi</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/kariyer/"><span
-                                                    class="t">Kariyer <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                        fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#kariyer/"><span class="t">Kariyer <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Açık pozisyonlar ve başvuru</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/destek/"><span
-                                                    class="t">Destek <svg viewBox="0 0 24 24" stroke="currentColor"
-                                                        fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#destek/"><span class="t">Destek <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Yardım ve destek merkezi</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/proje-yonetimi/"><span
-                                                    class="t">Proje Yönetimi <svg viewBox="0 0 24 24"
-                                                        stroke="currentColor" fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#proje-yonetimi/"><span class="t">Proje
+                                                    Yönetimi <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Proje yönetim çözümü</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/hesap-yonetimi/"><span
-                                                    class="t">Hesap Yönetimi <svg viewBox="0 0 24 24"
-                                                        stroke="currentColor" fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#hesap-yonetimi/"><span class="t">Hesap
+                                                    Yönetimi <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Hesap ve abonelik yönetimi</p>
                                             </a>
-                                            <a class="inline-feat" href="https://new.mobildev.com/partners/"><span
-                                                    class="t">İş Ortaklığı <svg viewBox="0 0 24 24"
-                                                        stroke="currentColor" fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#partners/"><span class="t">İş Ortaklığı <svg
+                                                        viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>İş Ortağı Ol</p>
                                             </a>
-                                            <a class="inline-feat"
-                                                href="https://new.mobildev.com/terimler-sozlugu/"><span
-                                                    class="t">Terimler Sözlüğü <svg viewBox="0 0 24 24"
-                                                        stroke="currentColor" fill="none" stroke-width="2">
+                                            <a class="inline-feat" href="#terimler-sozlugu/"><span class="t">Terimler
+                                                    Sözlüğü <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                                        stroke-width="2">
                                                         <path d="M5 12h14M13 6l6 6-6 6" />
                                                     </svg></span>
                                                 <p>Tüm terimler burada</p>
@@ -3986,98 +4031,55 @@
         </header>
     </div>
 
-    <!-- ===== GREEN SUBMENU ===== -->
-    <div style="max-width:1320px; margin:0 auto;">
-        <div class="smm-subnav-wrap">
-            <ul class="smm-subnav">
-                <li><a href="#genel-bakis">Genel Bakış</a></li>
-                <li><a href="#ozellikler">Özellikler</a></li>
-                <li><a href="#kullanim-alanlari">Kullanım Alanları</a></li>
-                <li><a href="#fiyatlandirma">Fiyatlandırma</a></li>
-                <li><a href="#sss">SSS</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#demo">Demo</a></li>
-            </ul>
-        </div>
+    <nav class="top-menu">
+        <ul class="menu">
+
+            <!-- sub menü erhan -->
+
+            <li><a href="access.html">Access</a></li>
+
+
+            <li>
+                <a href="#">Özellikler</a>
+            </li>
+
+            <li>
+                <a href="#">Servisler</a>
+            </li>
+
+            <li>
+                <a href="#">Entegrasyonlar</a>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Kaynaklar ▾</a>
+
+                <div class="dropdown-menu">
+
+                    <a href="#">Mevzuatlar</a>
+                    <a href="#">Blog</a>
+                    <!--  docs li erhan -->
+                    <a href="access_destek.html"><strong>Destek</strong></a>
+                    <a href="access_uygulama.html"><strong>Uygulama</strong></a>
+                    <a href="access_sss.html"><strong>SSS</strong></a>
+                    <a href="#">SMS Akademi</a>
+                    <a href="#">Başarı Hikayeleri</a>
+
+                </div>
+
+            </li>
+
+            <li><a href="#">Fiyatlandırma</a></li>
+
+        </ul>
+    </nav>
+
+    <!--  iframe erhan -->
+    <div style="width:100%; height:calc(100vh - 154px);">
+        <iframe src="http://localhost:3000/access?embed=true&color=e60b83"
+            style="width:100%; height:100%; border:none; display:block;">
+        </iframe>
     </div>
-
-    <!-- ===== HERO SECTION (demo content) ===== -->
-    <section class="smm-hero">
-        <div>
-            <h1><span>SMS Marketing Suite</span></h1>
-            <p class="subtitle">Dönüşümü yüksek kampanyalar oluşturun</p>
-            <p>Verilerinizi, izinlerinizi ve gerçek zamanlı iletişimi tek bir platformda yönetin. SMS Marketing Suite
-                ile pazarlama deneyiminizi zenginleştirin.</p>
-
-            <ul class="feat-list">
-                <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    Toplu SMS
-                </li>
-                <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    Kişiselleştirilmiş SMS
-                </li>
-                <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    OTP
-                </li>
-                <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    MMS
-                </li>
-                <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    Raporlama
-                </li>
-                <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    API Entegrasyon
-                </li>
-            </ul>
-
-            <div class="btn-group">
-                <a href="/genel-basvuru" class="btn btn-primary">
-                    Hemen Başlayın
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M5 12h14M13 6l6 6-6 6" />
-                    </svg>
-                </a>
-                <a href="/genel-basvuru" class="btn btn-secondary">
-                    Satış Ekibiyle İletişime Geçin
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M5 12h14M13 6l6 6-6 6" />
-                    </svg>
-                </a>
-            </div>
-        </div>
-        <div>
-            <div
-                style="background:#e8f4f0; border-radius:20px; padding:40px; min-height:300px; display:flex; align-items:center; justify-content:center; font-size:18px; color:#5B6B92;">
-                SMS Marketing Suite Görsel
-            </div>
-        </div>
-    </section>
 
     <script>
         function mdnavToggle(id) {
